@@ -31,7 +31,7 @@ class DoSearch extends Component{
 
 
     render(){
-        console.log(this.state.newBooks)
+        //console.log(this.state.newBooks)
         return(
             <div className="search-books">
                 <div className="search-books-bar">
