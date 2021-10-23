@@ -1,11 +1,10 @@
-import React, { Component } from "react";
+import React  from "react";
 import ListOfShelves from "./ListOfShelves";
 
 
-class AllBooks extends Component{
+function AllBooks (props) {
     
-    render(){
-        const {shelves} = this.props   
+        const {shelves} = props   
         return(
             <div className="list-books">
                  <div className="list-books-title">
@@ -15,13 +14,13 @@ class AllBooks extends Component{
                     <div className="list-books-content">
                     
                     {shelves.map((shelf)=>(
-                        <ListOfShelves key={shelf.key} books={this.props.books} shelf={shelf} upDateBook={this.props.upDateBook} />
+                        <ListOfShelves key={shelf.key} books={props.books} shelf={shelf} upDateBook={props.upDateBook} />
                     ))} 
                     </div>
                  </div>
             </div>
         )
-    }
+    
 }
 
 export default AllBooks
