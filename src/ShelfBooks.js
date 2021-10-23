@@ -20,9 +20,6 @@ export default class ShelfBooks extends Component{
             };
         });
 
-        console.log(books)
-
-
         return(
             <li >
                 <div className="book">
