@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React from "react";
 import ShelfBooks from "./ShelfBooks";
 
-export default class ListOfShelves extends Component{
-    render(){
-        const { books, shelf } = this.props
+export default function ListOfShelves (props){
+    
+        const { books, shelf } = props
         const shelfBooks = books.filter((book)=>(
             book.shelf === shelf.key
         ))
@@ -14,12 +14,12 @@ export default class ListOfShelves extends Component{
                 <div className="bookshelf-books">
                     <ol className="books-grid">
                         {shelfBooks.map(book=>(
-                            <ShelfBooks key={book.id} book={book} books={this.props.books}shelf={shelf} upDateBook={this.props.upDateBook} /> 
+                            <ShelfBooks key={book.id} book={book} books={props.books} shelf={shelf} upDateBook={props.upDateBook} /> 
                         ))}
                     </ol>
                 </div>
             </div>
         )
-    }
+    
 }
 
